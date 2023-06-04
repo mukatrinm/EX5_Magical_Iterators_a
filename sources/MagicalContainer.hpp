@@ -32,6 +32,16 @@ class MagicalContainer {
             other._index = 0;
         }
 
+        BaseIterator &operator=(BaseIterator &&other) noexcept {
+            if (this != &other) {
+                ptr_magical_containter = other.ptr_magical_containter;
+                _index = other._index;
+                other.ptr_magical_containter = nullptr;
+                other._index = 0;
+            }
+            return *this;
+        }
+
         virtual ~BaseIterator() = default;
 
         bool operator==(const BaseIterator &other) const;

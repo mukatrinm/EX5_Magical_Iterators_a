@@ -1,6 +1,6 @@
 #include "MagicalContainer.hpp"
 
-#include <iostream>
+#include <algorithm>
 #include <vector>
 
 using namespace ariel;
